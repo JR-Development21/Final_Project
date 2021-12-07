@@ -14,6 +14,8 @@ In addition to these datasets, we scraped data from olympedia.org, since the res
 
 ## Results
 ![image](https://user-images.githubusercontent.com/58056607/145109986-16601288-c3dc-4e54-a9fa-bd67db61da2e.png)
+![image](https://user-images.githubusercontent.com/58056607/145110090-665878de-36fd-4823-b40d-f109fb4cb8c1.png)
+
 
 
 ## Conclusion

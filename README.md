@@ -13,5 +13,7 @@ In addition to these datasets, we scraped data from olympedia.org, since the res
 ## Model Description/Fit/Justification
 
 ## Results
+![image](https://user-images.githubusercontent.com/58056607/145109986-16601288-c3dc-4e54-a9fa-bd67db61da2e.png)
+
 
 ## Conclusion

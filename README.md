@@ -2,7 +2,7 @@
 
 ## File Structure
 
-1. Scraping_Script.ipynb - Scrapes the test data for the 2021 Olympic Marathon results online. Also, compiles and cleans the training data. 
+1. Scraping_Script.ipynb - Scrapes the test data for the 2021 Olympic Marathon results online. Also compiles and cleans the training data. 
 2. EDA.ipynb - Runs a simple analysis and visualization on the data collected.
 3. model_tuning.ipynb - Prepared data and ran through hyperparameter tuning. 
 4. Final_model.ipynb - Predicted on test set and ran analyssis on results. 
@@ -42,9 +42,11 @@ Given the relative simplicity of our data set, these seemed to be the most impor
 
 A gradient boosted regressor was trained on the marathon data set. We chose to use this model for a variety of reasons as outlined below:
 
-	1. Gradient boosted models are flexible for working with many types of data sets without the excessive computational requirements of a deep learning model
-	2. Many gradient boosting models can account for nan values in the dataset without imputation
-	3. Gradient boosted models have shown to be strong at predicting on data, but at the cost of less interpretability. Our project focuses on prediction. 
+
+1. Gradient boosted models are flexible for working with many types of data sets without the excessive computational requirements of a deep learning model
+2. Many gradient boosting models can account for nan values in the dataset without imputation
+3. Gradient boosted models have shown to be strong at predicting on data, but at the cost of less interpretability. Our project focuses on prediction. 
+
 
 On the hyperparameter tuning step, we chose five key parameters to tune our model:
 

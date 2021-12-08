@@ -16,6 +16,7 @@ The marathon training data was found through links this article https://towardsd
 ### 2021 Olympic Results
 In addition to these datasets, we scraped data from olympedia.org, since the results moved from sports-reference.com to olympedia.org. This dataset contains similar columns to those contained in the references in the towardsdatascience.com article, but contained data from the men's Olympic marathon from 2021 instead of the top 1000 men's marathon performances. This dataset is to be used as the test dataset.
 ## Data Wrangling
+The main points of data wrangling were joining datasets together and adding useful columns not previously contained in the datasets. To begin, we joined the top 1000 men's marathon performances with the Olympic athlete attribute data on the athlete name. We then joined the resulting dataset with the gdp dataset on country code. We then added the total number of previous marathon performances, since that could indicate how well a given athlete has competed in the past. Additionally, if an athlete had previously competed in a marathon in our dataset, we kept that previous performance as a column. It should be noted that any missing values in our final dataset was imputed with a -1 because tree ensembles (such as GBM) account for such differences and can potentially use them for better prediction than if we had simply imputed the mean.
 
 ## EDA
 
@@ -44,7 +45,7 @@ A gradient boosted regressor was trained on the top 1000 men's marathon results 
 
 
 1. Gradient boosted models are flexible for working with many types of data sets without the excessive computational requirements of a deep learning model
-2. Many gradient boosting models can account for nan values in the dataset without imputation
+2. Many gradient boosting models can account for nan values in the dataset without much imputation
 3. Gradient boosted models have shown to be strong at predicting on data, but at the cost of less interpretability. Our project focuses on prediction. 
 
 

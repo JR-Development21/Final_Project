@@ -9,6 +9,9 @@ In addition to these datasets, we scraped data from olympedia.org, since the res
 ## Data Wrangling
 
 ## EDA
+
+Here are some aspects of the EDA that were considered when analyzing the marathon data set. 
+
 |       |   Results |       Year |       Age |   Previous marathons |           GDP |    Weight |   Height |   Last Time |
 |:------|----------:|-----------:|----------:|---------------------:|--------------:|----------:|---------:|------------:|
 | count | 1001      | 1001       | 1001      |           1001       | 926           | 129       |  129     |    585      |
@@ -19,6 +22,12 @@ In addition to these datasets, we scraped data from olympedia.org, since the res
 | 50%   | 7648      | 2011       |   38      |              3       |   5.04128e+10 |  60       |  174     |   7631      |
 | 75%   | 7680      | 2014       |   45      |              6       |   6.37675e+10 |  62       |  177     |   7673      |
 | max   | 7705      | 2017       |   74      |             14       |   1.61553e+13 |  70       |  191     |   7705      |
+
+The pairplot of our data set. We can see some correlations in the data such as age and year the individual ran the marathon. Also, note the extreme skewness in the GDP. 
+
+![image](https://user-images.githubusercontent.com/55562380/145143261-0fe73f6f-e210-4b8f-9751-159a1424e22e.png)
+
+Given the relative simplicity of our data set, these seemed to be the most important aspects of the EDA. Other plots can be found in the EDA.ipynb file for more information. 
 
 ## Model and Tuning
 

@@ -87,3 +87,5 @@ Finally, as a cautionary tale, we present our prediction results for the 2021 Ol
 
 
 ## Conclusion
+
+In summary, our goal was to model and predict marathon times of the 2021 Olympics based on the data of athletes who ran past marathon races. The data was scraped from various sources online and passed through a gradient boosted regressor algorithm. As seen from our results, the model did not perform as expected due to comparison issues in our predictors and response variables. Fortunately with this project being an exploratory analysis and prediction on the data, we can consider improving our data collection methods in three ways for optimal analysis. First, we can fill in the many NaN values present with their actual data points. Second, we can add more data points to the whole data set as 1000 may be too few. Lastly, we can consider collecting better comparison variables to adequately predict on the y values. Overall, it was an exciting study on what is a historically overlooked sport. 

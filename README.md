@@ -1,4 +1,13 @@
 # Final_Project
+
+## File Structure
+
+1. Scraping_Script.ipynb - Scrapes the test data for the 2021 Olympic Marathon results online. Also compiles and cleans the training data. 
+2. EDA.ipynb - Runs a simple analysis and visualization on the data collected.
+3. model_tuning.ipynb - Prepared data and ran through hyperparameter tuning. 
+4. Final_model.ipynb - Predicted on test set and ran analyssis on results. 
+
+
 ## Introduction
 Running as a sport is classically under-analyzed. Unlike baseball, football, and basketball, running doesn't have a high demand for analytics. This is largely due to the fact that it is generally not very well funded. As such, the data available in larger sports is not available for running, like movement, relative position, etc. because data collection is expensive. Perhaps the most criminally understudied event in athletics is the marathon, as it has a high rate of participation with an almost absent viewership. However, as the longest Olympic event, there are likely several interesting analytics that haven't been found as of yet. We therefore propose using a generalized boosting tree ensemble (GBM) to try to model large amounts of sparse marathon data. We will attempt to augment the sparsity of the matrix by adding new columns. During this analysis we hope to model the data from the top 1000 men's marathon performances with data found online. Additionally, we will use the model fit to that data to predict the 2021 Olympic men's marathon. Finally, we will use partial effect plots to find how diffferent features might be correlated with marathon time.
 ## Data
@@ -10,13 +19,34 @@ In addition to these datasets, we scraped data from olympedia.org, since the res
 
 ## EDA
 
+Here are some aspects of the EDA that were considered when analyzing the marathon data set. 
+
+|       |   Results |       Year |       Age |   Previous marathons |           GDP |    Weight |   Height |   Last Time |
+|:------|----------:|-----------:|----------:|---------------------:|--------------:|----------:|---------:|------------:|
+| count | 1001      | 1001       | 1001      |           1001       | 926           | 129       |  129     |    585      |
+| mean  | 7629.44   | 2009.34    |   39.5614 |              4.17283 |   3.69753e+11 |  59.4419  |  173.093 |   7615.59   |
+| std   |   64.5683 |    6.42968 |    7.9716 |              3.0866  |   1.55435e+12 |   4.28461 |    6.725 |     70.1434 |
+| min   | 7377      | 1981       |   25      |              1       |   3.4099e+08  |  49       |  155     |   7377      |
+| 25%   | 7595      | 2007       |   34      |              2       |   3.58952e+10 |  56       |  167     |   7576      |
+| 50%   | 7648      | 2011       |   38      |              3       |   5.04128e+10 |  60       |  174     |   7631      |
+| 75%   | 7680      | 2014       |   45      |              6       |   6.37675e+10 |  62       |  177     |   7673      |
+| max   | 7705      | 2017       |   74      |             14       |   1.61553e+13 |  70       |  191     |   7705      |
+
+The pairplot of our data set. We can see some correlations in the data such as age and year the individual ran the marathon. Also, note the extreme skewness in the GDP. 
+
+![image](https://user-images.githubusercontent.com/55562380/145143261-0fe73f6f-e210-4b8f-9751-159a1424e22e.png)
+
+Given the relative simplicity of our data set, these seemed to be the most important aspects of the EDA. Other plots can be found in the EDA.ipynb file for more information. 
+
 ## Model and Tuning
 
 A gradient boosted regressor was trained on the marathon data set. We chose to use this model for a variety of reasons as outlined below:
 
-	1. Gradient boosted models are flexible for working with many types of data sets without the excessive computational requirements of a deep learning model
-	2. Many gradient boosting models can account for nan values in the dataset without imputation
-	3. Gradient boosted models have shown to be strong at predicting on data, but at the cost of less interpretability. Our project focuses on prediction. 
+
+1. Gradient boosted models are flexible for working with many types of data sets without the excessive computational requirements of a deep learning model
+2. Many gradient boosting models can account for nan values in the dataset without imputation
+3. Gradient boosted models have shown to be strong at predicting on data, but at the cost of less interpretability. Our project focuses on prediction. 
+
 
 On the hyperparameter tuning step, we chose five key parameters to tune our model:
 

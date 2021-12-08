@@ -10,6 +10,8 @@ In addition to these datasets, we scraped data from olympedia.org, since the res
 
 ## EDA
 
+|       |   Results |       Year |       Age |   Previous marathons |           GDP |    Weight |   Height |   Last Time |\n|:------|----------:|-----------:|----------:|---------------------:|--------------:|----------:|---------:|------------:|\n| count | 1001      | 1001       | 1001      |           1001       | 926           | 129       |  129     |    585      |\n| mean  | 7629.44   | 2009.34    |   39.5614 |              4.17283 |   3.69753e+11 |  59.4419  |  173.093 |   7615.59   |\n| std   |   64.5683 |    6.42968 |    7.9716 |              3.0866  |   1.55435e+12 |   4.28461 |    6.725 |     70.1434 |\n| min   | 7377      | 1981       |   25      |              1       |   3.4099e+08  |  49       |  155     |   7377      |\n| 25%   | 7595      | 2007       |   34      |              2       |   3.58952e+10 |  56       |  167     |   7576      |\n| 50%   | 7648      | 2011       |   38      |              3       |   5.04128e+10 |  60       |  174     |   7631      |\n| 75%   | 7680      | 2014       |   45      |              6       |   6.37675e+10 |  62       |  177     |   7673      |\n| max   | 7705      | 2017       |   74      |             14       |   1.61553e+13 |  70       |  191     |   7705      |
+
 ## Model and Tuning
 
 A gradient boosted regressor was trained on the marathon data set. We chose to use this model for a variety of reasons as outlined below:

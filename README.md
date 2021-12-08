@@ -13,14 +13,14 @@ In addition to these datasets, we scraped data from olympedia.org, since the res
 ## Model and Tuning
 
 A gradient boosted regressor was trained on the marathon data set. We chose to use this model for a variety of reasons as outlined below:
-
 	1. Gradient boosted models are flexible for working with many types of data sets without the excessive computational requirements of a deep learning model
-	2.Many gradient boosting models can account for nan values in the dataset without imputation
+	2. Many gradient boosting models can account for nan values in the dataset without imputation
 	3. Gradient boosted models have shown to be strong at predicting on data, but at the cost of less interpretability. Our project focuses on prediction. 
 
 On the hyperparameter tuning step, we chose five key parameters to tune our model:
 
 learning_rate: Changes the contribution of each tree in the model
+
 	- n_estimators: Considers the number of boosting stages to perform on the model
 	- max_depth: Limits the number of nodes in trees
 	- min_samples_split: Minimum number of samples needed to split a node. 

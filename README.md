@@ -32,10 +32,7 @@ The model was tuned using a repeated K-fold cross-validation using random search
 
 The best model was as follows:
 
-```python
-GradientBoostingRegressor(learning_rate=0.05, max_depth=2.0,  min_samples_leaf=0.1, min_samples_split=0.1)
 
-```
 ![image](https://user-images.githubusercontent.com/55562380/145138819-5ba1888d-b625-4a73-bcfa-57c03eeaef7a.png)
 
 

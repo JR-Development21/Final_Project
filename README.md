@@ -1,4 +1,13 @@
 # Final_Project
+
+## File Structure
+
+1. Scraping_Script.ipynb - Scrapes the test data for the 2021 Olympic Marathon results online. Also, compiles and cleans the training data. 
+2. EDA.ipynb - Runs a simple analysis and visualization on the data collected.
+3. model_tuning.ipynb - Prepared data and ran through hyperparameter tuning. 
+4. Final_model.ipynb - Predicted on test set and ran analyssis on results. 
+
+
 ## Introduction
 Running as a sport is classically under-analyzed. Unlike baseball, football, and basketball, running doesn't have a high demand for analytics. This is largely due to the fact that it is generally not very well funded. As such, the data available in larger sports is not available for running, like movement, relative position, etc. because data collection is expensive. Perhaps the most criminally understudied event in athletics is the marathon, as it has a high rate of participation with an almost absent viewership. However, as the longest Olympic event, there are likely several interesting analytics that haven't been found as of yet. We therefore propose using a generalized boosting tree ensemble (GBM) to try to model large amounts of sparse marathon data. We will attempt to augment the sparsity of the matrix by adding new columns. During this analysis we hope to model the data from the top 1000 men's marathon performances with data found online. Additionally, we will use the model fit to that data to predict the 2021 Olympic men's marathon. Finally, we will use partial effect plots to find how diffferent features might be correlated with marathon time.
 ## Data

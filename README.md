@@ -20,8 +20,7 @@ A gradient boosted regressor was trained on the marathon data set. We chose to u
 
 On the hyperparameter tuning step, we chose five key parameters to tune our model:
 
-learning_rate: Changes the contribution of each tree in the model
-
+	- learning_rate: Changes the contribution of each tree in the model
 	- n_estimators: Considers the number of boosting stages to perform on the model
 	- max_depth: Limits the number of nodes in trees
 	- min_samples_split: Minimum number of samples needed to split a node. 

@@ -60,7 +60,7 @@ On the hyperparameter tuning step, we chose five key parameters to tune our mode
 
 Each of these hyperparameters were indicated to have the greatest effect on modifying the model for optimal tuning on the data set. 
 
-The model was tuned using a repeated K-fold cross-validation using random search on the hyperparameters. This allowed for 15000 total fits on the model to find the optimal hyperparameters. 
+The model was tuned using a repeated K-fold cross-validation using random search on the hyperparameters. This allowed for 15000 total fits on the model to find the optimal hyperparameters that minimized root mean squared error (RMSE). Minimizing RMSE is a standard way to optimize models because it strikes a balance between optimal bias and variance.
 
 The best model was as follows:
 

@@ -48,6 +48,7 @@ A gradient boosted regressor was trained on the top 1000 men's marathon results 
 2. Many gradient boosting models can account for nan values in the dataset without much imputation
 3. Gradient boosted models have shown to be strong at predicting on data, but at the cost of less interpretability. Our project focuses on prediction. 
 
+However, gradient boosting regressors tend to overfit if cross validation is not performed. Therefore, repeated K-fold cross-validation was performed to prevent overfitting by maximizing out-of-sample performance.
 
 On the hyperparameter tuning step, we chose five key parameters to tune our model:
 
